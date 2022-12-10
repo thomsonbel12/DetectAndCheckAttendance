@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Web cam</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <style>
+    input {
+      width: 420px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    }
+
+    input:focus {
+      outline: 2px solid #5392fa;
+    }
+
+    input[type="number"] {
+      -webkit-appearance: none;
+
+    }
+    .input_wrap{
+      display: flex;
+      width: 415px;
+      margin: 12px 0;
+      justify-content: space-between;
+      /* align-items: center; */
+      padding: 12px;
+      background-color: rgb(224, 224, 224);
+      border-radius: 5px;
+  }
+  </style>
+</head>
+
+<body>
+
+  <form action="/video_feed1" method="post">
+    <div style="padding: 50px;">
+      <div class="input_wrap" id="id_input_wrap">
+        <label style="width: 100px;" for="id_input" class="lable input_item">Nhập ID</label>
+        <input class="input input_item" type="number" name="id_input" id="id_input" placeholder="" value={{Ids}}>
+      </div>
+
+      <div class="input_wrap" id="name_input_wrap">
+        <label style="width: 100px;" for="id_input" class="input_item lable">Nhập tên</label>
+        <input class="input input_item" type="text" name="name_input" id="name_input" placeholder="" value={{names}}>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+        <div class="">
+          <button id="test" type="submit"> Tiếp tục </button>
+          <div style="justify-content: center; display: flex; margin-top: 30px;"><img
+              src="{{ url_for('video_feed1') }}">
+          </div>
+
+          <!-- <button class="btn btn-primary" style="color: white;" onclick=multi()>Capture Image</button> -->
+
+
+          <!-- <video id="video" width="640" height="480" autoplay ></video> -->
+          <!-- <div style="justify-content: center; display: flex; margin-top: 30px;"><img src="{{ url_for('video_feed1') }}"></div> -->
+        </div>
+        <!-- <div class="" style="display:none">
+          <canvas id="myCanvas" width="640" height="480" style="border:1px solid #d3d3d3;"></canvas>
+        </div> -->
+
+      </div>
+    </div>
+  </form>
+
+
+  <script>
+
+    // var video = document.getElementById('video');
+    // navigator.media = navigator.getUserMedia ||
+    //   navigator.WebKitgetUserMedia;
+
+    // navigator.getUserMedia({
+    //   video: true,
+    //   audio: false
+    // }, function (stream) {
+    //   video.srcObject = stream;
+    //   video.play();
+
+    // }, function (error) {
+    //   //somthing went wrong in playing
+    // }
+    // );
+    // function multi() {
+
+    //   snapshot();
+    //   snapshot();
+    //   snapshot();
+    //   snapshot();
+    //   window.location.href = '/process';
+    // }
+    // function snapshot() {
+    //   var canvas = document.getElementById("myCanvas");
+    //   var ctx = canvas.getContext("2d");
+    //   ctx.drawImage(video, 0, 0, 640, 480);
+    //   var dataURL = canvas.toDataURL('image/png', 1.0);
+
+    //   $.ajax({
+    //     type: "POST",
+    //     url: "/saveimage",
+    //     data: {
+    //       imageBase64: dataURL
+    //     }
+    //   });
+    //   //             }).done(function(o) {
+
+    //   // });
+
+
+    // }
+
+   // document.getElementById("test").click();
+  </script>
+
+
+
+</body>
+
+</html>

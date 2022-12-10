@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #292929;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.container > h1{
+    width: 100%;
+    text-align: center;
+}
+.body form > div{
+    padding: 12px;
+    margin-top: 24px;
+    border: 2px solid #fff;
+    background-color: rgb(224, 224, 224);
+    /* width: 700px; */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+.input_wrap{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 12px;
+    border-radius: 5px;
+}
+.btn{
+    padding: 8px;
+    background-color: #ccc;
+    border: 1px solid #333;
+    margin: 0 8px;
+    cursor: pointer;
+    width: 80px;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+.clear_btn{
+    background-color: rgb(240, 77, 77);
+    color: #fff;
+
+}
+.btn:hover{
+    opacity: 0.6;
+}
+.input_item{
+    padding: 8px;
+    margin: 0 12px;
+}
+input{
+    width: 420px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+input:focus{
+    outline: 2px solid #5392fa;
+}
+input[type="number"]{
+    -webkit-appearance: none;
+
+}
+.btn_group{
+    justify-content: center;
+    /* width: 900px; */
+}
+.btn_group .btn{
+    width: 150px;
+    height: 80px;
+    background-color: #5392fa;
+    color: #fff;
+}
